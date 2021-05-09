@@ -1,0 +1,24 @@
+.nav-item span,.nav-item a{
+  float: left;
+}
+
+nav.navbar{
+  padding: 0;
+}
+.pull-right{
+  float: right;
+  display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.show .pull-right{
+  float: left;
+  display: flex;
+    flex-direction: row;
+    justify-content: unset;
+}
+
+.mynavbar .navbar-expand-lg .navbar-collapse{
+  display: block !important;
+}

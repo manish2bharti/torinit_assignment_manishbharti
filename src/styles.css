@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+.primary-btn {
+  line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    border:  1px solid transparent;
+    color: #fff;
+    display: inline-block;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    text-transform: capitalize;
+    position: relative;
+    background-image: -webkit-linear-gradient(45deg, #62bdfc 0%, #8490ff 100%);
+    font-size: 14px;
+
+    margin-top: 10px;
+  /* background-image: -moz-linear-gradient(45deg, #62bdfc 0%, #8490ff 100%);
+  background-image: -ms-linear-gradient(45deg, #62bdfc 0%, #8490ff 100%); */
+}
+
+.primary-btn:hover {
+  background: transparent;
+  border: 1px solid #69B4FD;
+  color: #69B4FD;
+}

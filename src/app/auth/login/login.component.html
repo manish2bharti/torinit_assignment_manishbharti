@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3 wrap-login">
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()" class="login-form">
+      <span class="login-form-title p-b-26">
+        Welcome
+      </span>
+      <div class="mb-3 wrap-input validate-input">
+        <!-- <label>Email (example: Sincere@april.biz)</label> -->
+        <input type="text" class="input" formControlName="email"
+        [class.has-val] = "loginForm.get('email').touched"/>
+        <span class="focus-input" data-placeholder="Email (e.g. Sincere@april.biz)"></span>
+        <div class="col-md-12 pull-left p-tb-15" *ngIf="loginForm.get('email').touched && !loginForm.get('email').valid" >
+          <span *ngIf="loginForm.get('email').errors.required">
+            Email is required
+          </span>
+          <span *ngIf="loginForm.get('email').errors.email">Invalid Email</span>
+        </div>
+      </div>
+      <!-- <div class="mb-3 wrap-input validate-input">
+        <label>Password</label>
+        <input type="password" class="input" formControlName="password" [class.has-val] = "loginForm.get('password').touched"/>
+        <span class="focus-input" data-placeholder="Password"></span>
+        <div  class="col-md-12 pull-left p-tb-15" *ngIf=" loginForm.get('password').touched && !loginForm.get('password').valid " >
+          <span>Password is required</span>
+        </div>
+      </div> -->
+
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid" >
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
