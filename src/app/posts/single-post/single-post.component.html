@@ -5,8 +5,8 @@
     <div><span class="pHeading">Id:</span> {{ postData.id }}</div>
     <div><span class="pHeading">Title:</span> {{ postData.title }}</div>
     <div><span class="pHeading">Description:</span> {{ postData.body }}</div>
-  </div>
-  <div>
-    <a class="primary-btn"  [routerLink]="['/posts']">Back to posts</a>
+    <div>
+      <a class="primary-btn" (click)="gotoPosts(postData.userId)" >Back to posts</a>
+    </div>
   </div>
 </div>

@@ -19,6 +19,7 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthEffects {
+  window: any;
   constructor(
     private actions$: Actions,
     private authService: AuthService,
@@ -57,7 +58,8 @@ export class AuthEffects {
         tap((action) => {
           this.store.dispatch(setErrorMessage({ message: '' }));
           if (action.redirect) {
-            this.router.navigate(['/posts']);
+            console.log(action.user.id)
+            this.router.navigate([action.user.id+'/posts']);
           }
         })
       );
@@ -81,7 +83,9 @@ export class AuthEffects {
         ofType(autoLogout),
         map((action) => {
           this.authService.logout();
-          this.router.navigate(['auth']);
+          this.router.navigate(['auth']).then(() => {
+            window.location.reload();
+          });;
         })
       );
     },

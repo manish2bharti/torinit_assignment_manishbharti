@@ -11,27 +11,27 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: 'posts',
+    path: ':userid/posts',
     loadChildren: () =>
       import('./posts/posts.module').then((m) => m.PostsModule),
     canActivate: [AuthGuard],
   },
   {
-    path: 'posts/details/:id',
+    path: ':userid/posts/details/:id',
     component: SinglePostComponent,
   },
   {
-    path: 'albums',
+    path: ':userid/albums',
     loadChildren: () =>
       import('./album/album.module').then((m) => m.AlbumModule),
     canActivate: [AuthGuard],
   },
   {
-    path: 'albums/details/:id',
+    path: ':userid/albums/details/:id',
     component: SingleAlbumComponent,
   },
   {
-    path: 'todos',
+    path: ':userid/todos',
     loadChildren: () =>
       import('./todo/todo.module').then((m) => m.TodoModule),
     canActivate: [AuthGuard],

@@ -6,7 +6,7 @@ export interface PostsState extends EntityState<Post> {
 }
 
 export const postsAdapter = createEntityAdapter<Post>({
-  sortComparer: sortByName,
+  // sortComparer: sortByName,
 });
 
 export const initialState: PostsState = postsAdapter.getInitialState({

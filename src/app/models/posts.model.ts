@@ -1,4 +1,5 @@
 export interface Post {
+  userId: string;
   id?: string;
   title: string;
   description: string;
@@ -6,6 +7,7 @@ export interface Post {
 }
 
 export interface PostComments {
+  userId: string;
   postId?: string;
   id?: string;
   name: string;

@@ -16,13 +16,13 @@
     <div class="collapse navbar-collapse" id="navbarNav" [ngClass]="{'show': !isCollapsed}">
       <ul class="navbar-nav col-md-6">
         <li class="nav-item" *ngIf="isAuthenticated | async">
-          <a class="nav-link" href="#" [routerLink]="['/posts']">Posts</a>
+          <a class="nav-link" href="#" [routerLink]="[this.user.id+'/posts']">Posts</a>
         </li>
         <li class="nav-item" *ngIf="isAuthenticated | async">
-          <a class="nav-link" href="#" [routerLink]="['/albums']">Albums</a>
+          <a class="nav-link" href="#" [routerLink]="[this.user.id+'/albums']">Albums</a>
         </li>
         <li class="nav-item" *ngIf="isAuthenticated | async">
-          <a class="nav-link" href="#" [routerLink]="['/todos']">Todo</a>
+          <a class="nav-link" href="#" [routerLink]="[this.user.id+'/todos']">Todo</a>
         </li>
         <li class="nav-item" *ngIf="!(isAuthenticated | async)">
           <a class="nav-link" href="#" [routerLink]="['/auth']">Login</a>
