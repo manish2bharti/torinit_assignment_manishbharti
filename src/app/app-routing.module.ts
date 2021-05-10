@@ -31,6 +31,12 @@ const routes: Routes = [
     component: SingleAlbumComponent,
   },
   {
+    path: 'todos',
+    loadChildren: () =>
+      import('./todo/todo.module').then((m) => m.TodoModule),
+    canActivate: [AuthGuard],
+  },
+  {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },

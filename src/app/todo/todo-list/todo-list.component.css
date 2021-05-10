@@ -1,0 +1,95 @@
+h3{
+  width: 100%;
+  margin: 10px 0;
+  font-size: 20px;
+}
+.searchInput{
+  float:right;
+  padding:8px 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  border: 1px solid #d4d4d4;
+}
+
+ul.todoList{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.todoList li{
+  margin: 5px 0;
+}
+
+.toggleTodoSection{
+  float: right;
+}
+.toggleTodoSection label{
+  font-size: 12px;
+}
+.toggleTodoSection .styled-checkbox + label:before{
+  margin-top: 0;
+}
+.toggleTodoSection  .styled-checkbox:checked + label:after{
+  top:8px;
+}
+.styled-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.styled-checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+.styled-checkbox + label span{
+  color: #000 !important;
+}
+.styled-checkbox + label:before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 3px;
+  margin-top: 4px;
+  border: 1px solid #ddd;
+}
+.styled-checkbox:hover + label:before {
+  background: #4571ec;
+}
+.styled-checkbox:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+.styled-checkbox:checked + label:before {
+  background: #4571ec;
+}
+.styled-checkbox:disabled + label {
+  color: #4571ec;
+  cursor: not-allowed;
+}
+.styled-checkbox:disabled + label span {
+  color: #4571ec;
+  cursor: auto;
+}
+.styled-checkbox:disabled + label:before {
+  box-shadow: none;
+  background: #ddd;
+}
+.styled-checkbox:disabled:checked + label:before {
+  background: #4571ec;
+  opacity: 0.4;
+}
+.styled-checkbox:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 12px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
+}

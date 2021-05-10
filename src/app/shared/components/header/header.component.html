@@ -21,6 +21,9 @@
         <li class="nav-item" *ngIf="isAuthenticated | async">
           <a class="nav-link" href="#" [routerLink]="['/albums']">Albums</a>
         </li>
+        <li class="nav-item" *ngIf="isAuthenticated | async">
+          <a class="nav-link" href="#" [routerLink]="['/todos']">Todo</a>
+        </li>
         <li class="nav-item" *ngIf="!(isAuthenticated | async)">
           <a class="nav-link" href="#" [routerLink]="['/auth']">Login</a>
         </li>
