@@ -3,7 +3,7 @@
     <h3>Posts List <input type="text" [(ngModel)]="queryString" class="searchInput" placeholder="Search title"></h3>
     <div class="col-md-12">
       <ngb-accordion class="accordion-item"  [closeOthers]="true" activeIds="post-0"  *ngIf="posts | async as postsData">
-        <ngb-panel id="post-{{i}}" title="Simple" *ngFor="let post of postsData  | FilterPipe: queryString ; let i = index"  title="{{post.title}}">
+        <ngb-panel id="post-{{i}}" title="Simple" *ngFor="let post of postsData  | FilterPipe: queryString ; let i = index" >
           <ng-template ngbPanelTitle>
             <span>{{ post.title }} <span class="commentsCount">{{post.comments.length}}</span></span>
           </ng-template>

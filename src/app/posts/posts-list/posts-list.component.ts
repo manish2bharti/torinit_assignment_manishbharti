@@ -1,5 +1,4 @@
 import { getPosts} from './../state/posts.selector';
-import { getUserDetail } from './../../auth/state/auth.selector';
 import { PostsService } from './../../services/posts.service';
 import { Post, PostComments } from './../../models/posts.model';
 import { Observable } from 'rxjs';

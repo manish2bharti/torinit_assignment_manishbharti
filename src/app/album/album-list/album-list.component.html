@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3>Albums List</h3>
+    <div class="col-md-12">
+      <div  *ngIf="albums | async as albumsData">
+        <ul class="albumList">
+          <li *ngFor="let album of albumsData; let i = index">
+            <p class="heading"><strong>Album {{i+1}}: </strong> {{ album.photos.length }} Photos </p>
+            <p>{{ album.title }} </p>
+            <button class="primary-btn pull-left"  (click)="openWindowCustomClass(album)">Detail</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

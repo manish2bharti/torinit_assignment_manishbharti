@@ -1,0 +1,35 @@
+.album-model{
+
+}
+
+.close{
+  background: none;
+    border: 0;
+    font-size: 25px;
+    font-weight: 600;
+}
+.album-model.modal-body {
+  padding:0;
+}
+
+.album-model.modal-body span{
+  height: 190px;
+    width: 150px;
+    margin: 3px 3px;
+    float: left;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+}
+
+.album-model.modal-body span p{
+  width: 100%;
+    float: left;
+    padding: 5px;
+    height: 35px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

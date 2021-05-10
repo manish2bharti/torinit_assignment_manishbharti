@@ -1,0 +1,41 @@
+h3{
+  width: 100%;
+  margin: 10px 0;
+  font-size: 20px;
+}
+.bold{
+  font-weight: 500;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+ul.albumList{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.albumList li{
+  height: 165px;
+    width: 18%;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #d4d4d4;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+ul.albumList li button{
+  margin: 0;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+}
