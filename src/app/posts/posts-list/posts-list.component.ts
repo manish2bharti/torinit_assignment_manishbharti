@@ -1,6 +1,5 @@
 import { getPosts} from './../state/posts.selector';
-import { PostsService } from './../../services/posts.service';
-import { Post, PostComments } from './../../models/posts.model';
+import { Post } from './../../models/posts.model';
 import { Observable } from 'rxjs';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Store } from '@ngrx/store';
@@ -19,7 +18,7 @@ export class PostsListComponent implements OnInit {
   totalPosts;
   activeId;
   queryString = '';
-  constructor(private store: Store<AppState>, private postsService: PostsService,) {}
+  constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
     this.posts = this.store.select(getPosts);

@@ -1,6 +1,5 @@
 import { getAlbums} from './../state/album.selector';
-import { AlbumService } from './../../services/album.service';
-import { Album, AlbumPhotos } from '../../models/albums.model';
+import { Album } from '../../models/albums.model';
 import { Observable } from 'rxjs';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Store } from '@ngrx/store';
@@ -21,7 +20,7 @@ export class AlbumListComponent implements OnInit {
   totalPosts;
   activeId;
   queryString = '';
-  constructor(private store: Store<AppState>, private albumService: AlbumService,private modalService: NgbModal) {}
+  constructor(private store: Store<AppState>, private modalService: NgbModal) {}
 
   ngOnInit(): void {
     this.albums = this.store.select(getAlbums);
@@ -35,7 +34,6 @@ export class AlbumListComponent implements OnInit {
   }
 
   openWindowCustomClass(album: Album) {
-    // this.modalService.open(album, { windowClass: 'dark-modal' });
     const modalRef = this.modalService.open(SingleAlbumComponent, { size: 'xl' });
     modalRef.componentInstance.album = album;
   }
