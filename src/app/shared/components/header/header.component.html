@@ -24,7 +24,7 @@
       </ul>
       <ul class="navbar-nav col-md-6 pull-right">
         <li class="nav-item" *ngIf="isAuthenticated | async">
-          <span class="nav-link" *ngIf="isCollapsed"  href="#">{{this.user.name}} ({{this.user.company.name}})</span>
+          <a class="nav-link" *ngIf="isCollapsed" target="_blank"  href="http://{{this.user!.website}}">{{this.user!.name}} ({{this.user!.company!.name}})</a>
           <a class="nav-link" href="#" (click)="onLogout($event)">Logout</a>
         </li>
       </ul>

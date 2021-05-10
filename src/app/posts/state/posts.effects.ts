@@ -38,8 +38,6 @@ export class PostsEffects {
         if (!posts.length || posts.length === 1) {
           return this.postsService.getPosts().pipe(
             map((posts) => {
-
-              console.log(posts)
               return loadPostsSuccess({ posts });
             })
           );

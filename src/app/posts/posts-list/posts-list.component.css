@@ -50,3 +50,15 @@ h3{
   outline: 0;
   box-shadow: none !important;
 }
+
+.commentsCount{
+  background-image: -webkit-linear-gradient(45deg, #62bdfc 0%, #8490ff 100%);
+  border-radius: 50%;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  font-weight: 500;
+  display: inline-block;
+  margin-left: 10px;
+}

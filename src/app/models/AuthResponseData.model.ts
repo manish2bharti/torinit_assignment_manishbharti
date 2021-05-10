@@ -6,5 +6,6 @@ export interface AuthResponseData {
   username: string;
   userId: string;
   name: string;
+  website: string;
   company: {};
 }

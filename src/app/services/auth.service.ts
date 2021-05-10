@@ -33,6 +33,7 @@ export class AuthService {
       data.email,
       environment.idToken,
       expirationDate,
+      data.website,
       data.company
     );
     return user;
@@ -76,6 +77,7 @@ export class AuthService {
         userData.email,
         userData.token,
         expirationDate,
+        userData.website,
         userData.company,
       );
       this.runTimeoutInterval(user);

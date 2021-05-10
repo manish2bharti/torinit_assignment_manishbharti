@@ -6,6 +6,7 @@ export class User {
     private email: string,
     private token: string,
     private expirationDate: Date,
+    private website: string,
     private company: {},
   ) {}
 
