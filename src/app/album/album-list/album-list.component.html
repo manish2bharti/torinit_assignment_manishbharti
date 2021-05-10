@@ -7,7 +7,7 @@
           <li *ngFor="let album of albumsData; let i = index">
             <p class="heading"><strong>Album {{i+1}}: </strong> {{ album.photos.length }} Photos </p>
             <p>{{ album.title }} </p>
-            <button class="primary-btn pull-left"  (click)="openWindowCustomClass(album)">Detail</button>
+            <button class="primary-btn pull-left"  (click)="openWindowCustomClass(album)">View Photos</button>
           </li>
         </ul>
       </div>
