@@ -5,6 +5,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from 'app/store/app.state';
 import { loadTodos } from '../state/todo.actions';
+import { TodosService } from './../../services/todos.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-todo-list',
@@ -16,17 +18,22 @@ export class TodoListComponent implements OnInit {
   todos: Observable<Todo[]>;
   showCheckedOnly: boolean = false;
   newTodoArray;
-  constructor(private store: Store<AppState>) {}
+  constructor(private store: Store<AppState>, private todoService: TodosService,) {}
 
   ngOnInit(): void {
-    this.todos = this.store.select(getTodos);
-    this.todos.subscribe(data =>{
-      data.map(elem => {
-        return Object.assign({}, elem);
-      });
-      console.log(data)
-      return this.newTodoArray = data;
+    this.todoService.getTodoData().subscribe(
+      data => {
+        this.newTodoArray = data
+      }
+    );
+  }
+
+  fieldsChange(values:any):void {
+    this.newTodoArray.forEach(element => {
+      if(values.currentTarget.id == 'todo-'+element.id){
+        element.completed = true;
+      }
     });
-    this.store.dispatch(loadTodos());
+    console.log(values.currentTarget.id);
   }
 }

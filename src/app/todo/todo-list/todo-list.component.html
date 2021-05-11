@@ -9,7 +9,7 @@
     <div class="col-md-12">
       <ul class="todoList" >
         <li *ngFor="let todo of newTodoArray  | FilterChecked: showCheckedOnly  ; let i = index">
-          <input class="styled-checkbox" id="todo-{{i+1}}" type="checkbox" disabled [(ngModel)]="todo.completed">
+          <input class="styled-checkbox" id="todo-{{i+1}}" type="checkbox" [(ngModel)]="todo.completed">
           <label for="todo-{{i+1}}"> <span>{{ todo.title }} </span></label>
         </li>
       </ul>

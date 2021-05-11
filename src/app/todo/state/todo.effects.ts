@@ -25,7 +25,10 @@ export class TodosEffects {
         if (!todos.length || todos.length === 1) {
           return this.todoService.getTodos().pipe(
             map((todos) => {
-              return loadTodosSuccess({ todos });
+              todos.map(elem => {
+                return Object.assign({}, elem);
+              });
+              return loadTodosSuccess( {todos} );
             })
           );
         }
