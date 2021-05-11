@@ -1,3 +1,4 @@
+// Auth Guard service for authenticate the user
 import { exhaustMap, map } from 'rxjs/operators';
 import { AppState } from './../store/app.state';
 import { Store } from '@ngrx/store';

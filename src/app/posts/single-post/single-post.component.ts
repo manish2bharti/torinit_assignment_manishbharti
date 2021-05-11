@@ -1,3 +1,4 @@
+// Single Post component: show the selected post data
 import { getPostById } from './../state/posts.selector';
 import { Store } from '@ngrx/store';
 import { AppState } from './../../store/app.state';

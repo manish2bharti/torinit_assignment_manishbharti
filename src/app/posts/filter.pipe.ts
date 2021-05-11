@@ -1,3 +1,4 @@
+//FilterPipe used for filtering the data in post while searching
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({

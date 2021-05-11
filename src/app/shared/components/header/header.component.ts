@@ -1,3 +1,5 @@
+// Header component: show all the routes info and user details
+
 import { isAuthenticated, getUserDetail } from './../../../auth/state/auth.selector';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';

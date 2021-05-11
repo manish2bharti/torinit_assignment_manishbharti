@@ -1,3 +1,4 @@
+// Login Component
 import { setLoadingSpinner } from './../../store/Shared/shared.actions';
 import { loginStart } from './../state/auth.actions';
 import { FormGroup, FormControl, Validators } from '@angular/forms';

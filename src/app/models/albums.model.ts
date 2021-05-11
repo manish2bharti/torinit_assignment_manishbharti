@@ -1,3 +1,4 @@
+// Album anf AlbumPhotos interface
 export interface Album {
   id?: string;
   title: string;

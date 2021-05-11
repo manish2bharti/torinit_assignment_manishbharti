@@ -1,3 +1,4 @@
+//App Module
 import { CustomSerializer } from './store/router/custom-serializer';
 import { AuthTokenInterceptor } from './services/AuthToken.interceptor';
 import { AuthEffects } from './auth/state/auth.effects';

@@ -1,3 +1,4 @@
+// Post list component: show all the post list
 import { getPosts} from './../state/posts.selector';
 import { Post } from './../../models/posts.model';
 import { Observable } from 'rxjs';

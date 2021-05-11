@@ -1,3 +1,4 @@
+//AuthResponse interface
 export interface AuthResponseData {
   idToken: string;
   email: string;

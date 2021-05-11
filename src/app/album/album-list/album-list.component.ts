@@ -1,3 +1,4 @@
+// Album list component: show all the album data
 import { getAlbums} from './../state/album.selector';
 import { Album } from '../../models/albums.model';
 import { Observable } from 'rxjs';

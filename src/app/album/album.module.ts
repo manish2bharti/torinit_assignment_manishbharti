@@ -1,3 +1,4 @@
+//Album Module
 import { PostsEffects } from './state/album.effects';
 import { EffectsModule } from '@ngrx/effects';
 import { ALBUM_STATE_NAME } from './state/album.selector';

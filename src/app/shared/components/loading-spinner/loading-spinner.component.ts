@@ -1,3 +1,4 @@
+// Loader spinner component for showing the loader on login
 import { Component, OnInit } from '@angular/core';
 
 @Component({

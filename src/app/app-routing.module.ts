@@ -1,4 +1,4 @@
-// import { AlbumModule } from './album/album.module';
+// Routing Module: Handle Project Routing
 import { SinglePostComponent } from './posts/single-post/single-post.component';
 import { SingleAlbumComponent } from './album/single-album/single-album.component';
 import { AuthGuard } from './services/auth.guard';

@@ -1,3 +1,4 @@
+// Filter checked pipe for filterning the checked and unckecked values.
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({

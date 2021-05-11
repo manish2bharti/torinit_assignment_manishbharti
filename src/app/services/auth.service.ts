@@ -1,3 +1,4 @@
+// Auth Services for login, logout, set/get user data in local storage
 import { User } from './../models/user.model';
 import { Observable } from 'rxjs';
 import { AuthResponseData } from './../models/AuthResponseData.model';

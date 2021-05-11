@@ -1,3 +1,4 @@
+// Main App Component
 import { getLoading, getErrorMessage } from './store/Shared/shared.selector';
 import { Observable } from 'rxjs';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';

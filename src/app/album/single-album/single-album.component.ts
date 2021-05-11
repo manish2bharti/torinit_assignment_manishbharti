@@ -1,3 +1,4 @@
+// Single Album component: show the selected album data
 import { Album } from '../../models/albums.model';
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';

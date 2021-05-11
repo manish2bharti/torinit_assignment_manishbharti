@@ -1,3 +1,4 @@
+// Album service for get the Posts/Comments and PostById data
 import { Album, AlbumPhotos } from '../models/albums.model';
 import { forkJoin, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';

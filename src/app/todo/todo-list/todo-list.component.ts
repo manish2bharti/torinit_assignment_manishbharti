@@ -1,3 +1,4 @@
+// Todo list component: show all the todo list in this component
 import { getTodos} from './../state/todo.selector';
 import { Todo } from './../../models/todos.model';
 import { Observable } from 'rxjs';

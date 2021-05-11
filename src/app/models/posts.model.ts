@@ -1,3 +1,4 @@
+//Post anf PostComments interface
 export interface Post {
   userId: string;
   id?: string;
